@@ -1,0 +1,34 @@
+<html>
+<head>
+<meta http-equiv="cache-control" content="no-cache">
+<title>LHC+CMS Pages 1</title>
+<script type="text/javascript" src="http://cern.ch/cmspage1/jquery.min.js"></script>
+<script language="javascript" type="text/javascript">
+function refresh()
+{
+  document.images["lhcpage1"].src = 'http://cern.ch/vistar-capture/lhc1.png'+ '?'+Math.random();
+  document.images["page1"].src = 'http://cern.ch/cmspage1/data/page1.png' + '?'+Math.random();
+  document.images["daq"].src = 'http://cmsonline.cern.ch/daqStatusSCX/aDAQmon/DAQstatusGre.jpg' + '?'+Math.random();
+  setTimeout("refresh()", 60000);
+}
+$(document).ready(function()
+{
+  refresh();
+});
+</script>
+</head>
+<body>
+<center>
+<div id="content">
+<img id="lhcpage1" name="lhcpage1" src="http://cern.ch/vistar-capture/lhc1.png" style="width:49%;">
+<img id="page1" name="page1" src="http://cern.ch/cmspage1/data/page1.png" style="width:49%;">
+<br>
+<iframe src="http://cmsonline.cern.ch/portal/page/portal/CMS%20online%20system/DCS/FSM?root=CMS_TRACKER" style="width:100%; height:650px"></iframe>
+<br>
+<img id="daq" name="daq" src="http://cmsonline.cern.ch/daqStatusSCX/aDAQmon/DAQstatusGre.jpg" style="width:100%;">
+<br>
+</div>
+</center>
+</body>
+
+</html>
